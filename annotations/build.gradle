@@ -1,7 +1,17 @@
 apply plugin: 'java'
+apply plugin: 'maven-publish'
+
+group = 'com.github.JamesDurham'
+
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 }
 
-
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}
