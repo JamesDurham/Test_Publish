@@ -2,7 +2,8 @@ apply plugin: 'java'
 apply plugin: 'maven-publish'
 
 group = 'com.github.JamesDurham'
-
+targetCompatibility = '1.7'
+sourceCompatibility = '1.7'
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
